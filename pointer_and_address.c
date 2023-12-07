@@ -1,17 +1,19 @@
 #include <stdio.h>
 
 int main(void) {
-	// æ•°å€¤ã‚’å…¥ã‚Œã‚‹å¤‰æ•°
+	// ”’l‚ğ“ü‚ê‚é•Ï”
 	int x = 1;
-	printf("x â†’ å€¤ : %d, ã‚¢ãƒ‰ãƒ¬ã‚¹ : %p\n", x, &x);
+	// ƒAƒhƒŒƒX‚ğæ‚Á‚Ä‚­‚é‚Æ‚«‚Í &x
+	printf("x ¨ ’l : %d, ƒAƒhƒŒƒX : %p\n", x, &x);
 
-	// ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å…¥ã‚Œã‚‹ãƒã‚¤ãƒ³ã‚¿å¤‰æ•°
+	// ƒAƒhƒŒƒX‚ğ“ü‚ê‚éƒ|ƒCƒ“ƒ^•Ï”
 	int *pointer_x = &x;
-	printf("pointer_x â†’ å€¤ : %d, ã‚¢ãƒ‰ãƒ¬ã‚¹ : %p\n", *pointer_x, pointer_x);
+	// ƒAƒhƒŒƒX‚ğo‚·êŠ‚Í %p
+	printf("pointer_x ¨ ’l : %d, ƒAƒhƒŒƒX : %p\n", *pointer_x, pointer_x);
 
-	// ã‚¢ãƒ‰ãƒ¬ã‚¹ã«ã‚¢ã‚¯ã‚»ã‚¹ã—ã¦å€¤ã‚’ä»£å…¥
+	// * ‚ÅƒAƒhƒŒƒX‚ÉƒAƒNƒZƒX‚µ‚Ä’l‚ğ‘ã“ü
 	*pointer_x = 2;
-	printf("x â†’ å€¤ : %d, ã‚¢ãƒ‰ãƒ¬ã‚¹ : %p\n", x, &x);
+	printf("x ¨ ’l : %d, ƒAƒhƒŒƒX : %p\n", x, &x);
 
 	return 0;
 }

@@ -2,32 +2,16 @@
 
 #define ARRAY_LENGTH 5
 
-// é…åˆ—ã®è¦ç´ ã‚’è¦‹ã‚‹
-void show_array(int arr[], int len);
-
-// ä¸¦ã³æ›¿ãˆï¼ˆé¸æŠã‚½ãƒ¼ãƒˆï¼‰
-void select_sort(int arr[], int len);
-
-int main(void) {
-	int arr[ARRAY_LENGTH] = {5, 1, 9, 2, 4};
-	
-	printf("ä¸¦ã³æ›¿ãˆå‰ : ");
-	show_array(arr, ARRAY_LENGTH);
-
-	select_sort(arr, ARRAY_LENGTH);
-
-	printf("ä¸¦ã³æ›¿ãˆå¾Œ : ");
-	show_array(arr, ARRAY_LENGTH);
-}
-
-void show_array(int arr[], int len) {
+// ”z—ñ‚Ì—v‘f‚ğŒ©‚é
+void show_array(int arr[], int len){
 	printf("{ %d", arr[0]);
 	for (int i = 1; i < len; i++)
 		printf(", %d", arr[i]);
 	printf(" }\n");
 }
 
-void select_sort(int arr[], int len) {
+// •À‚Ñ‘Ö‚¦i‘I‘ğƒ\[ƒgj
+void select_sort(int arr[], int len){
 	for (int i = 0; i < len - 1; i++) {
 		for (int j = i + 1; j < len; j++) {
 			if (arr[i] > arr[j]) {
@@ -38,3 +22,24 @@ void select_sort(int arr[], int len) {
 		}
 	}
 }
+
+// “ü‚ê‘Ö‚¦
+void swap(int arr[], int idx1, int idx2) {
+	int tmp = arr[idx1];
+	arr[idx1] = arr[idx2];
+	arr[idx2] = tmp;
+}
+
+
+int main(void) {
+	int arr[ARRAY_LENGTH] = {5, 1, 9, 2, 4};
+	
+	printf("•À‚Ñ‘Ö‚¦‘O : ");
+	show_array(arr, ARRAY_LENGTH);
+
+	select_sort(arr, ARRAY_LENGTH);
+
+	printf("•À‚Ñ‘Ö‚¦Œã : ");
+	show_array(arr, ARRAY_LENGTH);
+}
+

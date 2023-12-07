@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-	// è¦ç´ æ•°ï¼•ã®é…åˆ—
+	// —v‘f”‚T‚Ì”z—ñ
 	int x[5] = {5, 4, 3, 2, 1};
 
-	// ã‚¢ãƒ‰ãƒ¬ã‚¹ã®è¡¨ç¤º
-	printf("x â†’ ã‚¢ãƒ‰ãƒ¬ã‚¹ : %p\n", x);
-	// è¦ç´ ã®è¡¨ç¤º
-	printf("x â†’ ");
+	// ƒAƒhƒŒƒX‚Ì•\¦
+	printf("x ¨ ƒAƒhƒŒƒX : %p\n", x);
+	// —v‘f‚Ì•\¦
+	printf("x ¨ ");
+	// x[0] = *(x + 0)
 	printf("{ %d", *(x + 0));
 	for (int i = 1; i < 5; i++) 
 		printf(", %d", *(x + i));
@@ -15,4 +16,3 @@ int main(void) {
 
 	return 0;
 }
-

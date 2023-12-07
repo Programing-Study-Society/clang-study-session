@@ -1,37 +1,22 @@
 #include <stdio.h>
 
-
-// é…åˆ—ã®è¦ç´ ã‚’è¦‹ã‚‹
-void show_array(int arr[], int len);
-
-// é…åˆ—ã®æŒ‡å®šã•ã‚ŒãŸã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ç•ªå·ã®è¦ç´ ã‚’å…¥ã‚Œæ›¿ã‚‹
-void array_swap(int *arr, int idx_1, int idx_2);
-
+// ƒAƒhƒŒƒX‚ğ‚Q‚Â“n‚µ‚ÄŒğŠ·‚·‚é
+void swap(int *num1, int *num2);
 
 int main(void) {
 
 	int x[5] = {5, 1, 9, 2, 4};
 
-	printf("å…¥ã‚Œæ›¿ãˆå‰ x : "); show_array(x, 5);
-	array_swap(x, 1, 4);
-	printf("å…¥ã‚Œæ›¿ãˆå¾Œ x : "); show_array(x, 5);
+	printf("“ü‚ê‘Ö‚¦‘O %d : %d\n", x[2], x[3]);
+	swap(x + 2, x + 3);
+	printf("“ü‚ê‘Ö‚¦Œã %d : %d\n", x[2], x[3]);
 
 	return 0;
 }
 
-
-// arr[]ã¯ã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’å—ã‘å–ã£ã¦ã„ã‚‹ã®ã¨åŒã˜
-void show_array(int arr[], int len) {
-	printf("{ %d", *(arr + 0));		// ã‚¢ãƒ‰ãƒ¬ã‚¹ã‹ã‚‰ã‚¢ã‚¯ã‚»ã‚¹
-	for (int i = 1; i < len; i++)
-		printf(", %d", *(arr + i));
-	printf(" }\n");
-}
-
-
-// ã‚¢ãƒ‰ãƒ¬ã‚¹ã¨å…¥ã‚Œæ›¿ãˆãŸã„ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ç•ªå·ã‚’å—ã‘å–ã‚‹
-void array_swap(int *arr, int idx_1, int idx_2) {
-	int tmp = *(arr + idx_1);			// ã‚¢ãƒ‰ãƒ¬ã‚¹ã‹ã‚‰ã‚¢ã‚¯ã‚»ã‚¹
-	*(arr + idx_1) = *(arr + idx_2);
-	*(arr + idx_2) = tmp;
+// •Ï”éŒ¾‚Æ“¯‚¶‚æ‚¤‚É Œ^ *•Ï” ‚Å‹Lq
+void swap(int *num1, int *num2) {
+	int tmp = *num1;	// ƒAƒhƒŒƒX‚ÉƒAƒNƒZƒX‚µ‚Ä’l‚ğæ“¾
+	*num1 = *num2;		// ƒAƒhƒŒƒX‚ÉƒAƒNƒZƒX‚µ‚Ä’l‚ğ‘ã“ü
+	*num2 = tmp;
 }

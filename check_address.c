@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main(void) {
-	// æ•°å€¤ã‚’å…¥ã‚Œã‚‹å¤‰æ•°
+	// ”’l‚ğ“ü‚ê‚é•Ï”
 	int x = 1;
-	printf("x â†’ å€¤ : %d, ã‚¢ãƒ‰ãƒ¬ã‚¹ : %p\n", x, &x);
+	printf("x ¨ ’l : %d, ƒAƒhƒŒƒX : %p\n", x, &x);
 
 	return 0;
 }
